@@ -28,20 +28,21 @@ public class Cau01 {
         }
         System.out.println("Tong so chi tieu la: " + sum);
 
-        System.out.println("Chi tieu nhieu nhat la: ");
-        int max = 0;
+        int max = list.get(0);
         for (int i = 1; i < list.size(); i++) {
-            if (list.get(i) > list.get(0)) {
+            if (list.get(i) > max) {
                 max = list.get(i);
             }
         }
-        System.out.println();
+        System.out.println("Chi tieu nhieu nhat: " + max);
 
-        System.out.println("Chi tieu it nhat la: ");
-        int min = 0;
-        for (int i = 0; i < list.size(); i++) {
-
+        int min = list.get(0);
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) < min) {
+                min = list.get(i);
+            }
         }
+        System.out.println("Chi tieu it nhat: " + min);
 
         int avg = sum / day;
         System.out.println("Trung binh/ngay: " + avg);
@@ -55,3 +56,4 @@ public class Cau01 {
         System.out.println("So ngay vuot trung binh la: " + count);
     }
 }
+
